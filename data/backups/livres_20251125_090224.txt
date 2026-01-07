@@ -1,0 +1,11 @@
+001|1984|George Orwell|1949|Dystopie|disponible
+002|Le Petit Prince|Antoine de Saint-Exupéry|1943|Conte|disponible
+003|Vingt mille lieues sous les mers|Jules Verne|1870|Science-Fiction|emprunté
+004|Le Malade imaginaire|Molière|1673|Théâtre|disponible
+005|L'Avare|Molière|1668|Théâtre|emprunté
+006|Le Seigneur des Anneaux|J.R.R. Tolkien|1954|Fantasy|disponible
+007|Les Misérables|Victor Hugo|1862|Roman|disponible
+008|L'Étranger|Albert Camus|1942|Roman|disponible
+009|Harry Potter à l'école des sorciers|J.K. Rowling|1997|Fantasy|emprunté
+010|Hamlet|William Shakespeare|1603|Théâtre|disponible
+011|Harry Potter et la chambre des secrets|J.K. Rowling|1998|Fantasy|disponible

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang='fr'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>Bibliothèque – Export</title>
+
+<style>
+  body {
+      font-family: 'Segoe UI', Tahoma, Arial, sans-serif; 
+      background: #eef1f6; /* Fond très clair */
+      margin: 0;
+      padding: 30px 10px;
+  }
+
+  .container {
+      max-width: 1200px; /* Plus large */
+      margin: auto;
+  }
+
+  h1 {
+      text-align: center;
+      margin-bottom: 35px;
+      color: #1f3a68;
+      font-size: 2.5em;
+  }
+
+  .card {
+      background: white;
+      padding: 0; 
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1); 
+      overflow: hidden; 
+  }
+
+  table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0;
+  }
+
+  thead {
+      background: #1f3a68; 
+      color: white;
+      font-weight: 600;
+      text-align: left;
+  }
+
+  th, td {
+      padding: 15px 20px; /* Augmenter le padding */
+      font-size: 14px;
+    border-bottom: 1px solid #e0e6f0;
+  }
+  
+  tbody tr:last-child td {
+      border-bottom: none;
+  }
+
+  tr:nth-child(even) {
+      background: #f7f9fc;
+  }
+
+  tr:hover {
+      background: #e0f0ff; 
+  }
+  
+  .statut-disponible {
+      background-color: #e9ffe6; 
+      color: #338600;
+      font-weight: bold;
+      border-radius: 4px;
+      padding: 4px 8px;
+      display: inline-block;
+  }
+
+  .statut-emprunte {
+      background-color: #fff1f0;
+      color: #cf1322;
+      font-weight: bold;
+      border-radius: 4px;
+      padding: 4px 8px;
+      display: inline-block;
+  }
+  
+  td:nth-child(2) { font-weight: 600; } 
+
+  @media (max-width: 700px) {
+      table, thead, tbody, th, td, tr {
+          display: block;
+      }
+
+      thead {
+          display: none;
+      }
+
+      .card {
+          padding: 0;
+          box-shadow: none;
+      }
+
+      tr {
+          margin-bottom: 15px;
+          background: white;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+          border-radius: 10px;
+          padding: 8px;
+      }
+
+      td {
+          display: flex;
+          justify-content: space-between;
+          padding: 10px;
+          border-bottom: 1px solid #eee;
+      }
+
+      td:last-child {
+          border-bottom: none;
+      }
+
+      td::before {
+          content: attr(data-label);
+          font-weight: bold;
+          color: #1f3a68;
+          min-width: 100px;
+      }
+  }
+</style>
+
+</head>
+<body>
+<div class='container'>
+<div class='card'>
+<h1>Inventaire de la bibliothèque</h1>
+
+<table>
+<thead>
+<tr>
+<th>ID</th><th>Titre</th><th>Auteur</th><th>Année</th><th>Genre</th><th>Statut</th>
+</tr>
+</thead>
+<tbody>
+
+<tr><td data-label="ID">001</td><td data-label="Titre">1984</td><td data-label="Auteur">George Orwell</td><td data-label="Année">1949</td><td data-label="Genre">Dystopie</td><td data-label="Statut"><span class="statut-disponible">disponible</span></td></tr>
+<tr><td data-label="ID">002</td><td data-label="Titre">Le Petit Prince</td><td data-label="Auteur">Antoine de Saint-Exupéry</td><td data-label="Année">1943</td><td data-label="Genre">Conte</td><td data-label="Statut"><span class="statut-emprunte">emprunté</span></td></tr>
+<tr><td data-label="ID">003</td><td data-label="Titre">Vingt mille lieues sous les mers</td><td data-label="Auteur">Jules Verne</td><td data-label="Année">1870</td><td data-label="Genre">Science-Fiction</td><td data-label="Statut"><span class="statut-emprunte">emprunté</span></td></tr>
+<tr><td data-label="ID">004</td><td data-label="Titre">Le Malade imaginaire</td><td data-label="Auteur">Molière</td><td data-label="Année">1673</td><td data-label="Genre">Théâtre</td><td data-label="Statut"><span class="statut-disponible">disponible</span></td></tr>
+<tr><td data-label="ID">005</td><td data-label="Titre">L'Avare</td><td data-label="Auteur">Molière</td><td data-label="Année">1668</td><td data-label="Genre">Théâtre</td><td data-label="Statut"><span class="statut-emprunte">emprunté</span></td></tr>
+<tr><td data-label="ID">006</td><td data-label="Titre">Le Seigneur des Anneaux</td><td data-label="Auteur">J.R.R. Tolkien</td><td data-label="Année">1954</td><td data-label="Genre">Fantasy</td><td data-label="Statut"><span class="statut-disponible">disponible</span></td></tr>
+<tr><td data-label="ID">007</td><td data-label="Titre">Les Misérables</td><td data-label="Auteur">Victor Hugo</td><td data-label="Année">1862</td><td data-label="Genre">Roman</td><td data-label="Statut"><span class="statut-disponible">disponible</span></td></tr>
+<tr><td data-label="ID">008</td><td data-label="Titre">L'Étranger</td><td data-label="Auteur">Albert Camus</td><td data-label="Année">1942</td><td data-label="Genre">Roman</td><td data-label="Statut"><span class="statut-disponible">disponible</span></td></tr>
+<tr><td data-label="ID">009</td><td data-label="Titre">Harry Potter à l'école des sorciers</td><td data-label="Auteur">J.K. Rowling</td><td data-label="Année">1997</td><td data-label="Genre">Fantasy</td><td data-label="Statut"><span class="statut-emprunte">emprunté</span></td></tr>
+<tr><td data-label="ID">010</td><td data-label="Titre">Hamlet</td><td data-label="Auteur">William Shakespeare</td><td data-label="Année">1603</td><td data-label="Genre">Théâtre</td><td data-label="Statut"><span class="statut-disponible">disponible</span></td></tr>
+<tr><td data-label="ID">011</td><td data-label="Titre">Harry Potter et la chambre des secrets</td><td data-label="Auteur">J.K. Rowling</td><td data-label="Année">1998</td><td data-label="Genre">Fantasy</td><td data-label="Statut"><span class="statut-disponible">disponible</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>
